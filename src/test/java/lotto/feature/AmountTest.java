@@ -45,4 +45,14 @@ public class AmountTest {
     void possibleLottoPurchaseAmount(int userInputAmount) {
         assertTrue(userInputAmount >= lottoMinAmount && userInputAmount <= lottoMaxAmount);
     }
+
+    @Test
+    void checkLottoCountByAmount() {
+        int userLottoCount = 2;
+
+        int lottoAmount = userLottoCount * lottoMinAmount;
+
+        assertEquals(2000, lottoAmount);
+        assertTrue(lottoAmount >= lottoMinAmount && lottoAmount <= lottoMaxAmount);
+    }
 }
